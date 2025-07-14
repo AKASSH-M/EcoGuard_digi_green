@@ -32,10 +32,10 @@ export function PersonalizedAlertCard({ className, ...props }: PersonalizedAlert
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      location: 'Orchard Road',
-      condition: 'PM2.5',
-      threshold: 55,
-      currentValue: 62,
+      location: 'Singapore River',
+      condition: 'Water Turbidity (NTU)',
+      threshold: 5,
+      currentValue: 7.2,
     },
   });
 
@@ -89,7 +89,7 @@ export function PersonalizedAlertCard({ className, ...props }: PersonalizedAlert
                 <FormItem>
                   <FormLabel>Condition</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., Air Quality Index" {...field} />
+                    <Input placeholder="e.g., Water Turbidity" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,7 +102,7 @@ export function PersonalizedAlertCard({ className, ...props }: PersonalizedAlert
                 <FormItem>
                   <FormLabel>Alert Threshold</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="e.g., 100" {...field} />
+                    <Input type="number" placeholder="e.g., 5" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -115,7 +115,7 @@ export function PersonalizedAlertCard({ className, ...props }: PersonalizedAlert
                 <FormItem>
                   <FormLabel>Current Value</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="e.g., 105" {...field} />
+                    <Input type="number" placeholder="e.g., 7.2" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
